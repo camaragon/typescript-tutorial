@@ -21,3 +21,31 @@ form.addEventListener('submit', (e) => {
     }
     list.render(doc, type.value, 'end');
 });
+// enums
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["FILM"] = 2] = "FILM";
+    ResourceType[ResourceType["DIRECTjOR"] = 3] = "DIRECTjOR";
+    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
+})(ResourceType || (ResourceType = {}));
+const docOne = {
+    uid: 1,
+    resourceType: ResourceType.BOOK,
+    data: { title: 'name of the wind' }
+};
+const docTwo = {
+    uid: 10,
+    resourceType: ResourceType.PERSON,
+    data: { name: 'yoshi' }
+};
+console.log(docOne, docTwo);
+
+
+// tuple
+
+// let arr = ['ryu', 25, true];
+// arr[0] = false;
+// arr[1] = 'yoshi';
+// arr = []
